@@ -62,7 +62,7 @@ A series of audio-visual multi-channel speech separation front-end components ba
 To reduce the error cost mismatch between the separation and recognition components, the entire system is jointly fine-tuned using a multi-task criterion interpolation of the scale-invariant signal to noise ratio (Si-SNR) with either the connectionist temporal classification (CTC), or lattice-free maximum mutual information (LF-MMI) loss function.
 Experiments suggest that: the proposed audio-visual multi-channel recognition system outperforms the baseline audio-only multi-channel ASR system by up to 8.04% (31.68% relative) and 22.86% (58.51% relative) absolute WER reduction on overlapped speech constructed using either simulation or replaying of the LRS2 dataset respectively.
 Consistent performance improvements are also obtained using the proposed audio-visual multi-channel recognition system when using occluded video input with the lip region} randomly covered up to 60%.</p>
-  <h3>Proposed Audio-viusal Multi-channel Speech Seperation Network Architecture:</h3>      
+  <h3>Proposed Audio-viusal Multi-channel Speech Seperation Front-ends:</h3>      
   <figure>
     <p style="text-align:center"><img src="./figure/separation-15.png"  alt="AVSE" height="420"/></p>
 <!--       <figcaption style="vertical-align:middle"> <b>Figure 1: </b> Illurstration of the audio-visual separation model</figcaption> -->
@@ -73,23 +73,19 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <li> (c) Mask based MVDR speech separation front-end.</li>
   </ul>
    
-  <h3>Jointly Fine-tuned Audio-visual Multi-channel Overlapped Speech Recognition System:</h3>
-  <p style="text-align:center"><img src="./figure/Joint-4.png"  alt="viusal modality driven gate" height="200"/></p>
-   <ul>
-    <li> "LFB" denotes denotes log filter bank acoustic features.</li>  
-    <li> The gradient of the recognition cost is propagated into the separation front-end to update the model parameters of the entire system. </li> 
-  </ul>
+  <h3> Si-SNR evaluation results of TF masking, filter&sum and masked based MVDR front-ends</h3> 
+  <p style="text-align:center"><img src="./figure/si-snr.png"  alt="viusal modality driven gate" height="200"/></p>
    
 
       <!-- MF -->
-    <h4>Seperated audio-visual samples of TF masking based speech separation front-end:</h4>
+    <h4>Seperated audio-visual samples of TF masking speech separation front-end:</h4>
     <table border="1">
     <tr>
       <td>No.</td>
       <td>Mixture input</td>
       <td>Ange feature (AF) only</td>
       <td>Visual feature only </td>
-      <td>Angle + Visual feature </td> 
+      <td>Angle  + Visual feature </td> 
       <td>Target clean</td>
 <!--       <td>Text</td> -->
     </tr>
@@ -97,30 +93,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6331559613336179781-00038/mix-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="tfmasking/6331559613336179781-00038/AF-6331559613336179781-00038.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6331559613336179781-00038/LIP-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6331559613336179781-00038/LIP+AF-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6331559613336179781-00038/clean-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -129,30 +125,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6334934169140712754-00001/mix-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="tfmasking/6334934169140712754-00001/AF-6334934169140712754-00001.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6334934169140712754-00001/LIP-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6334934169140712754-00001/LIP+AF-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6334934169140712754-00001/clean-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -161,30 +157,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6362913733590438579-00010/mix-6362913733590438579-00010.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="tfmasking/6362913733590438579-00010/AF-6362913733590438579-00010.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6362913733590438579-00010/LIP-6362913733590438579-00010.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6362913733590438579-00010/LIP+AF-6362913733590438579-00010.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6362913733590438579-00010/clean-6362913733590438579-00010.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -193,30 +189,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6352916338215591806-00003/mix-6352916338215591806-00003.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="tfmasking/6352916338215591806-00003/AF-6352916338215591806-00003.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6352916338215591806-00003/LIP-6352916338215591806-00003.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6352916338215591806-00003/LIP+AF-6352916338215591806-00003.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6352916338215591806-00003/clean-6352916338215591806-00003.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -225,30 +221,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6386700550965861901-00001/mix-6386700550965861901-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="tfmasking/6386700550965861901-00001/AF-6386700550965861901-00001.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6386700550965861901-00001/LIP-6386700550965861901-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6386700550965861901-00001/LIP+AF-6386700550965861901-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6386700550965861901-00001/clean-6386700550965861901-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -257,30 +253,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6386700550965861901-00019/mix-6386700550965861901-00019.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="tfmasking/6386700550965861901-00019/AF-6386700550965861901-00019.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6386700550965861901-00019/LIP-6386700550965861901-00019.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6386700550965861901-00019/LIP+AF-6386700550965861901-00019.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6386700550965861901-00019/clean-6386700550965861901-00019.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -289,30 +285,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6352893145392128503-00014/mix-6352893145392128503-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="tfmasking/6352893145392128503-00014/AF-6352893145392128503-00014.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6352893145392128503-00014/LIP-6352893145392128503-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6352893145392128503-00014/LIP+AF-6352893145392128503-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6352893145392128503-00014/clean-6352893145392128503-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -321,36 +317,307 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6351424266576959115-00014/mix-6351424266576959115-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="tfmasking/6351424266576959115-00014/AF-6351424266576959115-00014.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6351424266576959115-00014/LIP-6351424266576959115-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6351424266576959115-00014/LIP+AF-6351424266576959115-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="tfmasking/6351424266576959115-00014/clean-6351424266576959115-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
     </tr>
    </table>
+<!--   ======================================================================================     -->
+    <h4>Seperated audio samples of filter&sum separation front-ends: </h4>
+    <table border="1">
+    <tr>
+      <td>No.</td>
+      <td>Mixture input</td>
+      <td>Ange feature (AF) only</td>
+      <td>Visual feature only </td>
+      <td>Angle  + Visual feature </td> 
+      <td>Target clean</td>
+<!--       <td>Text</td> -->
+    </tr>
+<!--     m5dB -->
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="170">
+           <source src="fas/6331559613336179781-00038/mix-6331559613336179781-00038.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="170">
+        <source src="fas/6331559613336179781-00038/AF-6331559613336179781-00038.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="170">
+           <source src="fas/6331559613336179781-00038/LIP-6331559613336179781-00038.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="170">
+           <source src="fas/6331559613336179781-00038/LIP+AF-6331559613336179781-00038.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="170">
+           <source src="fas/6331559613336179781-00038/clean-6331559613336179781-00038.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="170">
+           <source src="fas/6334934169140712754-00001/mix-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="170">
+        <source src="fas/6334934169140712754-00001/AF-6334934169140712754-00001.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="170">
+           <source src="fas/6334934169140712754-00001/LIP-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="170">
+           <source src="fas/6334934169140712754-00001/LIP+AF-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="170">
+           <source src="fas/6334934169140712754-00001/clean-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="170">
+           <source src="fas/6362913733590438579-00010/mix-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="170">
+        <source src="fas/6362913733590438579-00010/AF-6362913733590438579-00010.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="170">
+           <source src="fas/6362913733590438579-00010/LIP-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="170">
+           <source src="fas/6362913733590438579-00010/LIP+AF-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="170">
+           <source src="fas/6362913733590438579-00010/clean-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="170">
+           <source src="fas/6389599653890730492-00015/mix-6389599653890730492-00015.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="170">
+        <source src="fas/6389599653890730492-00015/AF-6389599653890730492-00015.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="170">
+           <source src="fas/6389599653890730492-00015/LIP-6389599653890730492-00015.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="170">
+           <source src="fas/6389599653890730492-00015/LIP+AF-6389599653890730492-00015.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="170">
+           <source src="fas/6389599653890730492-00015/clean-6389599653890730492-00015.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="170">
+           <source src="fas/6339077953587836416-00018/mix-6339077953587836416-00018.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="170">
+        <source src="fas/6339077953587836416-00018/AF-6339077953587836416-00018.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="170">
+           <source src="fas/6339077953587836416-00018/LIP-6339077953587836416-00018.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="170">
+           <source src="fas/6339077953587836416-00018/LIP+AF-6339077953587836416-00018.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="170">
+           <source src="fas/6339077953587836416-00018/clean-6339077953587836416-00018.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="170">
+           <source src="fas/6337902850535709539-00065/mix-6337902850535709539-00065.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="170">
+        <source src="fas/6337902850535709539-00065/AF-6337902850535709539-00065.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="170">
+           <source src="fas/6337902850535709539-00065/LIP-6337902850535709539-00065.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="170">
+           <source src="fas/6337902850535709539-00065/LIP+AF-6337902850535709539-00065.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="170">
+           <source src="fas/6337902850535709539-00065/clean-6337902850535709539-00065.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="170">
+           <source src="fas/6355414720691614656-00013/mix-6355414720691614656-00013.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="170">
+        <source src="fas/6355414720691614656-00013/AF-6355414720691614656-00013.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="170">
+           <source src="fas/6355414720691614656-00013/LIP-6355414720691614656-00013.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="170">
+           <source src="fas/6355414720691614656-00013/LIP+AF-6355414720691614656-00013.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="170">
+           <source src="fas/6355414720691614656-00013/clean-6355414720691614656-00013.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="170">
+           <source src="fas/6362913733590438579-00092/mix-6362913733590438579-00092.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="170">
+        <source src="fas/6362913733590438579-00092/AF-6362913733590438579-00092.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="170">
+           <source src="fas/6362913733590438579-00092/LIP-6362913733590438579-00092.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="170">
+           <source src="fas/6362913733590438579-00092/LIP+AF-6362913733590438579-00092.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="170">
+           <source src="tfmasking/6362913733590438579-00092/clean-6362913733590438579-00092.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>
+   </table>
+    
 <!--   ======================================================================================     -->
     <h4>Seperated audio samples of mask based MVDR separation front-ends: </h4>
     <table border="1">
@@ -365,30 +632,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6331559613336179781-00038/mix-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="mvdr/6331559613336179781-00038/AF-6331559613336179781-00038.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6331559613336179781-00038/LIP-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6331559613336179781-00038/LIP+AF-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6331559613336179781-00038/clean-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -397,30 +664,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6334934169140712754-00001/mix-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="mvdr/6334934169140712754-00001/AF-6334934169140712754-00001.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6334934169140712754-00001/LIP-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6334934169140712754-00001/LIP+AF-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6334934169140712754-00001/clean-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -429,30 +696,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6362913733590438579-00010/mix-6362913733590438579-00010.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="mvdr/6362913733590438579-00010/AF-6362913733590438579-00010.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6362913733590438579-00010/LIP-6362913733590438579-00010.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6362913733590438579-00010/LIP+AF-6362913733590438579-00010.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6362913733590438579-00010/clean-6362913733590438579-00010.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -461,30 +728,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6364791063795516278-00005/mix-6364791063795516278-00005.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="mvdr/6364791063795516278-00005/AF-6364791063795516278-00005.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6364791063795516278-00005/LIP-6364791063795516278-00005.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6364791063795516278-00005/LIP+AF-6364791063795516278-00005.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6364791063795516278-00005/clean-6364791063795516278-00005.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -493,30 +760,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6363952256682671319-00003/mix-6363952256682671319-00003.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="mvdr/6363952256682671319-00003/AF-6363952256682671319-00003.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6363952256682671319-00003/LIP-6363952256682671319-00003.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6363952256682671319-00003/LIP+AF-6363952256682671319-00003.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6363952256682671319-00003/clean-6363952256682671319-00003.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -525,30 +792,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6386959537493875163-00004/mix-6386959537493875163-00004.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="mvdr/6386959537493875163-00004/AF-6386959537493875163-00004.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6386959537493875163-00004/LIP-6386959537493875163-00004.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6386959537493875163-00004/LIP+AF-6386959537493875163-00004.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6386959537493875163-00004/clean-6386959537493875163-00004.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -557,30 +824,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6375448166147161013-00031/mix-6375448166147161013-00031.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="mvdr/6375448166147161013-00031/AF-6375448166147161013-00031.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6375448166147161013-00031/LIP-6375448166147161013-00031.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6375448166147161013-00031/LIP+AF-6375448166147161013-00031.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6375448166147161013-00031/clean-6375448166147161013-00031.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -589,30 +856,30 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <tr>
       <td>1</td>
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6354346562325159922-00021/mix-6354346562325159922-00021.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <video controls width="150">
+        <video controls width="170">
         <source src="mvdr/6354346562325159922-00021/AF-6354346562325159922-00021.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6354346562325159922-00021/LIP-6354346562325159922-00021.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6354346562325159922-00021/LIP+AF-6354346562325159922-00021.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
        <td>
-         <video controls width="150">
+         <video controls width="170">
            <source src="mvdr/6354346562325159922-00021/clean-6354346562325159922-00021.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
@@ -622,36 +889,15 @@ Consistent performance improvements are also obtained using the proposed audio-v
 <!--   ======================================================================================     -->      
     
    
-  
-   <h3> Si-SNR evaluation results of the separation system</h3>
-   <p style="text-align:center"><img src="./image/Si-SNR-NP.png"  alt="viusal modality driven gate" height="100"/></p>
+     <h3>Jointly Fine-tuned Audio-visual Multi-channel Overlapped Speech Recognition System:</h3>
+     <p style="text-align:center"><img src="./figure/Joint-4.png"  alt="viusal modality driven gate" height="200"/></p>
+      <ul>
+        <li> "LFB" denotes denotes log filter bank acoustic features.</li>  
+        <li> The gradient of the recognition cost is propagated into the separation front-end to update the model parameters of the entire system. </li> 
+      </ul>
    
-   
-   
-    <h3>Integrated system architecture</h3>
-    <table align="center">
-    <tr>
-      <td><a><img src="image/FF-revise.png"  alt="viusal modality driven gate" height="300"/></a></td>
-      <td><a><img src="image/VM-revise.png"  alt="viusal modality driven gate" height="300" /></a></td>
-      <td><a><img src="image/AVM-revise.png"  alt="viusal modality driven gate" height="300"/></a></td>
-    </tr>
-    <tr align="center">
-      <td><a> (a) Feature concatenation (concat)</a></td>
-      <td><a> (b) Audio driven modality fusion gate (A&#8855V)</a></td>
-      <td><a> (c) Audio-visual driven modality fusion gate (AV&#8855V)</a></td>
-    </tr>
-    
-    </table>
-   
-   
-   <h3> Word Error Rate (WER) of Pipelined and Integrated Systems</h3>
-   <ul>
-    <li>"Multi" denotes multi-condition training data with separated speech and clean speech </li>    
-    <li>"Multi*" denotes multi-condition training data with overlapped and clean speech.</li>
-    <li>"concat" denotes feature concatenation.</li>
-    <li> "A&#8855V" denotes audio driven modality fusion gate;  "AV&#8855V" denotes audio-visual driven modality fusion gate;</li>
-   </ul>
-   <p style="text-align:center"><img src="./image/WER-Results.png"  alt="viusal modality driven gate" height="400"/></p>
+   <h3>WERs of proposed audio-visual multi-channel overlapped speech recognition systems :</h3>
+   <p style="text-align:center"><img src="./figure/wer.png"  alt="viusal modality driven gate" height="400"/></p>
    
    <h2>Reference</h2>
    <p> [1] Noda K, Yamaguchi Y, Nakadai K, et al. Audio-visual speech recognition using deep learning[J]. Applied Intelligence, 2015, 42(4): 722-737.</p>
