@@ -45,7 +45,7 @@ audio {
 <div style="border: none; width: 1000px; margin: 0 auto;">
 <body>
     <h2 align="center">Audio-visual Multi-channel Integration and Recognition of Overlapped Speech</h2>
-    <p style="line-height:100%", align="center"> <b>Authors: </b> Jianwei Yu,~\IEEEmembership
+    <p style="line-height:100%", align="center"> <b>Authors: </b> Jianwei Yu,
         Shi-Xiong Zhang,
         Bo Wu,
         Shansong Liu,
@@ -54,13 +54,20 @@ audio {
         Xunying Liu,}
         Helen Meng,}
         Dong Yu</p>
-    <p style="line-height:100%", align="justify"> <b>Abstract: </b> Automatic recognition of overlapped speech remains a highly challenging task to date. Motivated by the bimodal nature of human speech perception, this paper investigates the use of audio-visual technologies for overlapped speech recognition. Three issues associated with the construction of audio-visual speech recognition (AVSR) systems are addressed. First,  the basic architecture designs i.e. end-to-end and hybrid of AVSR systems are investigated. Second, purposefully designed modality fusion gates are used to robustly integrate the audio and visual features. Third, in contrast to a traditional pipelined architecture containing explicit speech separation and recognition components, a streamlined and integrated AVSR system optimized consistently using the lattice-free MMI (LF-MMI) discriminative criterion is also proposed. The proposed LF-MMI time-delay neural network (TDNN) system establishes the state-of-the-art for the LRS2 dataset. Experiments on overlapped speech simulated from the LRS2 dataset suggest the proposed AVSR system outperformed the audio only baseline LF-MMI DNN system by up to 29.98% absolute in word error rate (WER) reduction, and produced recognition performance comparable to a more complex pipelined system. Consistent performance improvements of 4.89% absolute in WER reduction over the baseline AVSR system using feature fusion are also obtained.</p>
+    <p style="line-height:100%", align="justify"> <b>Abstract: </b> Automatic speech recognition (ASR) technologies have been significantly advanced in the past few decades. However, recognition of overlapped speech remains a highly challenging task to date.
+To this end, multi-channel microphone array data are widely used in current ASR systems. 
+Motivated by the invariance of visual modality to acoustic signal corruption and the additional cues they provide to separate the target speaker from the interfering sound sources, this paper presents an audio-visual multi-channel based recognition system for overlapped speech. 
+It benefits from a tight integration between a speech separation front-end and recognition back-end, both of which incorporate additional video input.
+A series of audio-visual multi-channel speech separation front-end components based on TF masking,  Filter&Sum and mask-based MVDR neural channel integration approaches are developed. 
+To reduce the error cost mismatch between the separation and recognition components, the entire system is jointly fine-tuned using a multi-task criterion interpolation of the scale-invariant signal to noise ratio (Si-SNR) with either the connectionist temporal classification (CTC), or lattice-free maximum mutual information (LF-MMI) loss function.
+Experiments suggest that: the proposed audio-visual multi-channel recognition system outperforms the baseline audio-only multi-channel ASR system by up to 8.04% (31.68% relative) and 22.86% (58.51% relative) absolute WER reduction on overlapped speech constructed using either simulation or replaying of the LRS2 dataset respectively.
+Consistent performance improvements are also obtained using the proposed audio-visual multi-channel recognition system when using occluded video input with the lip region} randomly covered up to 60%.</p>
   <h3>Piplined and integrated AVSR systems:</h3>
   <p style="text-align:center"><img src="./image/pipeline.png"  alt="viusal modality driven gate" height="200"/></p>
-  <h3>Audio-viusal Multi-channel Speech Seperation Network Architecture:</h3>
+  <h3>Proposed Audio-viusal Multi-channel Speech Seperation Network Architecture:</h3>
         
   <figure>
-    <p style="text-align:center"><img src="./image/Seperation.jpg"  alt="viusal modality driven gate" height="350"/></p>
+    <p style="text-align:center"><img src="./figure/seperation-15.jpg"  alt="viusal modality driven gate" height="350"/></p>
 <!--       <figcaption style="vertical-align:middle"> <b>Figure 1: </b> Illurstration of the audio-visual separation model</figcaption> -->
   </figure>
   <ul>
