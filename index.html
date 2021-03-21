@@ -68,8 +68,8 @@ Consistent performance improvements are also obtained using the proposed audio-v
 <!--       <figcaption style="vertical-align:middle"> <b>Figure 1: </b> Illurstration of the audio-visual separation model</figcaption> -->
   </figure>
   <ul>
-    <li> (a) TF masking speech seperation front-end.</li>    
-    <li> (b) Filter&Sum speech seperation front-end.</li>
+    <li> (a) TF masking speech separation front-end.</li>    
+    <li> (b) Filter&Sum speech separation front-end.</li>
     <li> (c) Mask based MVDR speech separation front-end.</li>
   </ul>
    
@@ -80,11 +80,6 @@ Consistent performance improvements are also obtained using the proposed audio-v
     <li> The gradient of the recognition cost is propagated into the separation front-end to update the model parameters of the entire system. </li> 
   </ul>
    
-<video width="320" height="240" controls>
-  <source src="mvdr/6331559613336179781-00038/output3.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
 
       <!-- MF -->
     <h4>Seperated audio-visual samples of TF masking based speech separation front-end:</h4>
@@ -130,335 +125,502 @@ Your browser does not support the video tag.
          Your browser does not support the video tag.
          </video>
       </td>
-
-<!--       <td>advantageous</td> -->
-    </tr>
-       
-    <tr>
-      <td>2</td>
-      <td>
-         <video controls width="150">
-           <source src="demo3/m05/mix/6331559613336179781-00036.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-      <td>
-        <audio controls>
-        <source src="demo3/m05/upit/6331559613336179781-00036.wav" type="audio/wav">
-        </audio>
-      </td>      
-      <td>
-         <video controls width="150">
-           <source src="demo3/m05/tavsnet/6331559613336179781-00036.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td> 
-      <td>
-         <video controls width="150">
-           <source src="demo3/mp4-trans/transm5-6331559613336179781-00036.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-   </tr>
-   <tr>
-      <td>3</td>
-      <td>
-         <video controls width="150">
-           <source src="demo3/m05/mix/6331559613336179781-00019.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-      <td>
-        <audio controls>
-        <source src="demo3/m05/upit/6331559613336179781-00019.wav" type="audio/wav">
-        </audio>
-      </td>      
-      <td>
-         <video controls width="150">
-           <source src="demo3/m05/tavsnet/6331559613336179781-00019.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td> 
-      <td>
-         <video controls width="150">
-           <source src="demo3/mp4-trans/transm5-6331559613336179781-00019.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-   </tr>
-   </table>
-<!--   ======================================================================================     -->
-    <h4>Seperated audio samples of 0dB mixture: </h4>
-    <table border="1">
-    <tr>
-      <td>No.</td>
-      <td>Mixture input</td>
-      <td>Audio-only separation</td>
-      <td>Audio-visual separation</td>
-      <td>Ground truth</td>
     </tr>
     <tr>
       <td>1</td>
       <td>
          <video controls width="150">
-           <source src="demo3/0/mix/6352157417494386368-00050.mp4" type="video/mp4">
+           <source src="tfmasking/6334934169140712754-00001/mix-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <audio controls>
-        <source src="demo3/0/upit/6352157417494386368-00050.wav" type="audio/wav">
-        </audio>
+        <video controls width="150">
+        <source src="tfmasking/6334934169140712754-00001/AF-6334934169140712754-00001.mp4" type="video/mp4">
+        </video>
       </td>      
       <td>
          <video controls width="150">
-           <source src="demo3/0/tavsnet/6352157417494386368-00050.mp4" type="video/mp4">
+           <source src="tfmasking/6334934169140712754-00001/LIP-6334934169140712754-00001.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
          <video controls width="150">
-           <source src="demo3/mp4-trans/trans0-6352157417494386368-00050.mp4" type="video/mp4">
+           <source src="tfmasking/6334934169140712754-00001/LIP+AF-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="tfmasking/6334934169140712754-00001/clean-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6362913733590438579-00010/mix-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="tfmasking/6362913733590438579-00010/AF-6362913733590438579-00010.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6362913733590438579-00010/LIP-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6362913733590438579-00010/LIP+AF-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="tfmasking/6362913733590438579-00010/clean-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6352916338215591806-00003/mix-6352916338215591806-00003.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="tfmasking/6352916338215591806-00003/AF-6352916338215591806-00003.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6352916338215591806-00003/LIP-6352916338215591806-00003.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6352916338215591806-00003/LIP+AF-6352916338215591806-00003.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="tfmasking/6352916338215591806-00003/clean-6352916338215591806-00003.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6386700550965861901-00001/mix-6386700550965861901-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="tfmasking/6386700550965861901-00001/AF-6386700550965861901-00001.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6386700550965861901-00001/LIP-6386700550965861901-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6386700550965861901-00001/LIP+AF-6386700550965861901-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="tfmasking/6386700550965861901-00001/clean-6386700550965861901-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6386700550965861901-00019/mix-6386700550965861901-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="tfmasking/6386700550965861901-00019/AF-6386700550965861901-00019.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6386700550965861901-00019/LIP-6386700550965861901-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6386700550965861901-00019/LIP+AF-6386700550965861901-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="tfmasking/6386700550965861901-00019/clean-6386700550965861901-00019.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6352893145392128503-00014/mix-6352893145392128503-00014.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="tfmasking/6352893145392128503-00014/AF-6352893145392128503-00014.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6352893145392128503-00014/LIP-6352893145392128503-00014.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="tfmasking/6352893145392128503-00014/LIP+AF-6352893145392128503-00014.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="tfmasking/6352893145392128503-00014/clean-6352893145392128503-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
     </tr>
-       
     <tr>
-      <td>2</td>
+      <td>1</td>
       <td>
          <video controls width="150">
-           <source src="demo3/0/mix/6352893145392128503-00020.mp4" type="video/mp4">
+           <source src="tfmasking/6351424266576959115-00014/mix-6351424266576959115-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <audio controls>
-        <source src="demo3/0/upit/6352893145392128503-00020.wav" type="audio/wav">
-        </audio>
+        <video controls width="150">
+        <source src="tfmasking/6351424266576959115-00014/AF-6351424266576959115-00014.mp4" type="video/mp4">
+        </video>
       </td>      
       <td>
          <video controls width="150">
-           <source src="demo3/0/tavsnet/6352893145392128503-00020.mp4" type="video/mp4">
+           <source src="tfmasking/6351424266576959115-00014/LIP-6351424266576959115-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
          <video controls width="150">
-           <source src="demo3/mp4-trans/trans0-6352893145392128503-00020.mp4" type="video/mp4">
+           <source src="tfmasking/6351424266576959115-00014/LIP+AF-6351424266576959115-00014.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
-   </tr>
-   <tr>
-      <td>3</td>
+       <td>
+         <video controls width="150">
+           <source src="tfmasking/6351424266576959115-00014/clean-6351424266576959115-00014.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>
+   </table>
+<!--   ======================================================================================     -->
+    <h4>Seperated audio samples of mask based MVDR separation front-ends: </h4>
+    <table border="1">
+    <tr>
+      <td>No.</td>
+      <td>Mixture input</td>
+      <td>Ange feature (AF) only</td>
+      <td>Visual feature only </td>
+      <td>Angle feature + Visual feature </td> 
+      <td>Target clean</td>
+    </tr>
+    <tr>
+      <td>1</td>
       <td>
          <video controls width="150">
-           <source src="demo3/0/mix/6352498867394358158-00019.mp4" type="video/mp4">
+           <source src="mvdr/6331559613336179781-00038/mix-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
-        <audio controls>
-        <source src="demo3/0/upit/6352498867394358158-00019.wav" type="audio/wav">
-        </audio>
+        <video controls width="150">
+        <source src="mvdr/6331559613336179781-00038/AF-6331559613336179781-00038.mp4" type="video/mp4">
+        </video>
       </td>      
       <td>
          <video controls width="150">
-           <source src="demo3/0/tavsnet/6352498867394358158-00019.mp4" type="video/mp4">
+           <source src="mvdr/6331559613336179781-00038/LIP-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
          <video controls width="150">
-           <source src="demo3/mp4-trans/trans0-6352498867394358158-00019.mp4" type="video/mp4">
+           <source src="mvdr/6331559613336179781-00038/LIP+AF-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
-   </tr>
+       <td>
+         <video controls width="150">
+           <source src="mvdr/6331559613336179781-00038/clean-6331559613336179781-00038.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6334934169140712754-00001/mix-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="mvdr/6334934169140712754-00001/AF-6334934169140712754-00001.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6334934169140712754-00001/LIP-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6334934169140712754-00001/LIP+AF-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="mvdr/6334934169140712754-00001/clean-6334934169140712754-00001.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6362913733590438579-00010/mix-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="mvdr/6362913733590438579-00010/AF-6362913733590438579-00010.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6362913733590438579-00010/LIP-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6362913733590438579-00010/LIP+AF-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="mvdr/6362913733590438579-00010/clean-6362913733590438579-00010.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6364791063795516278-00005/mix-6364791063795516278-00005.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="mvdr/6364791063795516278-00005/AF-6364791063795516278-00005.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6364791063795516278-00005/LIP-6364791063795516278-00005.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6364791063795516278-00005/LIP+AF-6364791063795516278-00005.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="mvdr/6364791063795516278-00005/clean-6364791063795516278-00005.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6363952256682671319-00003/mix-6363952256682671319-00003.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="mvdr/6363952256682671319-00003/AF-6363952256682671319-00003.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6363952256682671319-00003/LIP-6363952256682671319-00003.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6363952256682671319-00003/LIP+AF-6363952256682671319-00003.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="mvdr/6363952256682671319-00003/clean-6363952256682671319-00003.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6386959537493875163-00004/mix-6386959537493875163-00004.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="mvdr/6386959537493875163-00004/AF-6386959537493875163-00004.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6386959537493875163-00004/LIP-6386959537493875163-00004.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6386959537493875163-00004/LIP+AF-6386959537493875163-00004.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="mvdr/6386959537493875163-00004/clean-6386959537493875163-00004.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>    
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6375448166147161013-00031/mix-6375448166147161013-00031.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="mvdr/6375448166147161013-00031/AF-6375448166147161013-00031.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6375448166147161013-00031/LIP-6375448166147161013-00031.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6375448166147161013-00031/LIP+AF-6375448166147161013-00031.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="mvdr/6375448166147161013-00031/clean-6375448166147161013-00031.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6354346562325159922-00021/mix-6354346562325159922-00021.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+      <td>
+        <video controls width="150">
+        <source src="mvdr/6354346562325159922-00021/AF-6354346562325159922-00021.mp4" type="video/mp4">
+        </video>
+      </td>      
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6354346562325159922-00021/LIP-6354346562325159922-00021.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td> 
+      <td>
+         <video controls width="150">
+           <source src="mvdr/6354346562325159922-00021/LIP+AF-6354346562325159922-00021.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="mvdr/6354346562325159922-00021/clean-6354346562325159922-00021.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+    </tr>
    </table>
 <!--   ======================================================================================     -->      
-    <h4>Seperated audio samples of 5dB mixture:</h4>
-    <table border="1">
-    <tr>
-      <td>No.</td>
-      <td>Mixture input</td>
-      <td>Audio-only separation</td>
-      <td>Audio-visual separation</td>
-      <td>Ground truth</td>
-    </tr>
     
-     <tr>
-      <td>1</td>
-      <td>
-         <video controls width="150">
-           <source src="demo3/5/mix/6390301881043558087-00025.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-      <td>
-        <audio controls>
-        <source src="demo3/5/upit/mix/6390301881043558087-00025.wav" type="audio/wav">
-        </audio>
-      </td>      
-      <td>
-         <video controls width="150">
-           <source src="demo3/5/tavsnet/6390301881043558087-00025.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td> 
-      <td>
-         <video controls width="150">
-           <source src="demo3/mp4-trans/trans5-6390301881043558087-00025.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-    </tr>
-       
-    <tr>
-      <td>2</td>
-      <td>
-         <video controls width="150">
-           <source src="demo3/5/mix/6392525815109495392-00008.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-      <td>
-        <audio controls>
-        <source src="demo3/5/upit/mix/6392525815109495392-00008.wav" type="audio/wav">
-        </audio>
-      </td>      
-      <td>
-         <video controls width="150">
-           <source src="demo3/5/tavsnet/6392525815109495392-00008.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td> 
-      <td>
-         <video controls width="150">
-           <source src="demo3/mp4-trans/trans5-6392525815109495392-00008.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-   </tr>
-   <tr>
-      <td>3</td>
-      <td>
-         <video controls width="150">
-           <source src="demo3/5/mix/6392568335285725796-00013.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-      <td>
-        <audio controls>
-        <source src="demo3/5/upit/mix/6392568335285725796-00013.wav" type="audio/wav">
-        </audio>
-      </td>      
-      <td>
-         <video controls width="150">
-           <source src="demo3/5/tavsnet/6392568335285725796-00013.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td> 
-      <td>
-         <video controls width="150">
-           <source src="demo3/mp4-trans/trans5-6392568335285725796-00013.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-   </tr>
-   </table>
-<!--   ======================================================================================     -->
-      
-    <h4>Seperated audio samples of 10dB mixture:</h4>
-    <table border="1">
-    <tr>
-      <td>No.</td>
-      <td>Mixture input</td>
-      <td>Audio-only separation</td>
-      <td>Audio-visual separation</td>
-      <td>Ground truth</td>
-    </tr>
-       
-    <tr>
-      <td>1</td>
-      <td>
-         <video controls width="150">
-           <source src="demo3/10/mix/6331559613336179781-00019.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-      <td>
-        <audio controls>
-        <source src="demo3/10/upit/6331559613336179781-00019.wav" type="audio/wav">
-        </audio>
-      </td>      
-      <td>
-         <video controls width="150">
-           <source src="demo3/10/tavsnet/6331559613336179781-00019.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td> 
-      <td>
-         <video controls width="150">
-           <source src="demo3/mp4-trans/trans10-6331559613336179781-00019.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-    </tr>       
-    <tr>
-      <td>2</td>
-      <td>
-         <video controls width="150">
-           <source src="demo3/10/mix/6331559613336179781-00020.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-      <td>
-        <audio controls>
-        <source src="demo3/10/upit/6331559613336179781-00020.wav" type="audio/wav">
-        </audio>
-      </td>      
-      <td>
-         <video controls width="150">
-           <source src="demo3/10/tavsnet/6331559613336179781-00020.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td> 
-      <td>
-         <video controls width="150">
-           <source src="demo3/mp4-trans/trans10-6331559613336179781-00020.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-   </tr>
-   <tr>
-      <td>3</td>
-      <td>
-         <video controls width="150">
-           <source src="demo3/10/mix/6331559613336179781-00029.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-      <td>
-        <audio controls>
-        <source src="demo3/10/upit/6331559613336179781-00029.wav" type="audio/wav">
-        </audio>
-      </td>      
-      <td>
-         <video controls width="150">
-           <source src="demo3/10/tavsnet/6331559613336179781-00029.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td> 
-      <td>
-         <video controls width="150">
-           <source src="demo3/mp4-trans/trans10-6331559613336179781-00029.mp4" type="video/mp4">
-         Your browser does not support the video tag.
-         </video>
-      </td>
-   </tr>
-   </table>
    
   
    <h3> Si-SNR evaluation results of the separation system</h3>
@@ -500,3 +662,4 @@ Your browser does not support the video tag.
 </div>
 </body>
 </html>
+
