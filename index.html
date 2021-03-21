@@ -64,7 +64,7 @@ Experiments suggest that: the proposed audio-visual multi-channel recognition sy
 Consistent performance improvements are also obtained using the proposed audio-visual multi-channel recognition system when using occluded video input with the lip region} randomly covered up to 60%.</p>
   <h3>Proposed Audio-viusal Multi-channel Speech Seperation Network Architecture:</h3>      
   <figure>
-    <p style="text-align:center"><img src="./figure/separation-15.png"  alt="AVSE" height="450"/></p>
+    <p style="text-align:center"><img src="./figure/separation-15.png"  alt="AVSE" height="420"/></p>
 <!--       <figcaption style="vertical-align:middle"> <b>Figure 1: </b> Illurstration of the audio-visual separation model</figcaption> -->
   </figure>
   <ul>
@@ -76,7 +76,8 @@ Consistent performance improvements are also obtained using the proposed audio-v
   <h3>Jointly Fine-tuned Audio-visual Multi-channel Overlapped Speech Recognition System:</h3>
   <p style="text-align:center"><img src="./figure/Joint-4.png"  alt="viusal modality driven gate" height="200"/></p>
    <ul>
-    <li> "LFB" denotes denotes log filter bank acoustic features.</li>    
+    <li> "LFB" denotes denotes log filter bank acoustic features.</li>  
+    <li> The gradient of the recognition cost is propagated into the separation front-end to update the model parameters of the entire system. </li> 
   </ul>
    
 <video width="320" height="240" controls>
