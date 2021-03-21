@@ -62,19 +62,21 @@ A series of audio-visual multi-channel speech separation front-end components ba
 To reduce the error cost mismatch between the separation and recognition components, the entire system is jointly fine-tuned using a multi-task criterion interpolation of the scale-invariant signal to noise ratio (Si-SNR) with either the connectionist temporal classification (CTC), or lattice-free maximum mutual information (LF-MMI) loss function.
 Experiments suggest that: the proposed audio-visual multi-channel recognition system outperforms the baseline audio-only multi-channel ASR system by up to 8.04% (31.68% relative) and 22.86% (58.51% relative) absolute WER reduction on overlapped speech constructed using either simulation or replaying of the LRS2 dataset respectively.
 Consistent performance improvements are also obtained using the proposed audio-visual multi-channel recognition system when using occluded video input with the lip region} randomly covered up to 60%.</p>
-  <h3>Piplined and integrated AVSR systems:</h3>
-  <p style="text-align:center"><img src="./image/pipeline.png"  alt="viusal modality driven gate" height="200"/></p>
-  <h3>Proposed Audio-viusal Multi-channel Speech Seperation Network Architecture:</h3>
-        
+  <h3>Proposed Audio-viusal Multi-channel Speech Seperation Network Architecture:</h3>      
   <figure>
-    <p style="text-align:center"><img src="./figure/separation-15.png"  alt="viusal modality driven gate" height="350"/></p>
+    <p style="text-align:center"><img src="./figure/separation-15.png"  alt="AVSE" height="450"/></p>
 <!--       <figcaption style="vertical-align:middle"> <b>Figure 1: </b> Illurstration of the audio-visual separation model</figcaption> -->
   </figure>
   <ul>
-    <li> The overlapped speech is simulated from testing of LRS2 [1].</li>    
-    <li> The separation model is used in the pipelined AVSR system.</li>
-    <li> For audio-only separation, we used uPIT-BLSTM [2] model with three layer BLSTMs, dropout rate 0.5 and adopted PSM as training targets, which was proved better than IRM. 257-dimentional linear spectrogram (hop-size/window=10ms/hann) was extracted as input features. The model generates two separated results for two-speaker mixture and we choose the one with higher Si-SNR value of groundtruth target speech as the corresponding separated speech.</li>
-    <li> For audio-visual separation, the frequency-domain model [3] we presented here used 321-dimentional spectrogram (hop-size/window=10ms/hann) as audio feature and lip embedding extracted by the LipNet from the mouth region-of-interest (ROI) as visual feature. The model directly generated the separated TF-mask of the target speaker. </li>
+    <li> (a) TF masking speech seperation front-end.</li>    
+    <li> (b) Filter&Sum speech seperation front-end.</li>
+    <li> (c) Mask based MVDR speech separation front-end.</li>
+  </ul>
+   
+  <h3>Jointly Fine-tuned Audio-visual Multi-channel Overlapped Speech Recognition System:</h3>
+  <p style="text-align:center"><img src="./figure/Joint-4.png"  alt="viusal modality driven gate" height="200"/></p>
+   <ul>
+    <li> "LFB" denotes denotes log filter bank acoustic features.</li>    
   </ul>
    
 <video width="320" height="240" controls>
