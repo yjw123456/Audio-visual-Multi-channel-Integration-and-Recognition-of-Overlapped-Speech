@@ -87,14 +87,15 @@ Your browser does not support the video tag.
 
 
       <!-- MF -->
-    <h4>Seperated audio samples of -5dB mixture:</h4>
+    <h4>Seperated audio-visual samples of TF masking based speech separation front-end:</h4>
     <table border="1">
     <tr>
       <td>No.</td>
       <td>Mixture input</td>
-      <td>Audio-only separation</td>
-      <td>Audio-visual separation</td>
-      <td>Ground truth</td>
+      <td>Ange feature (AF) only</td>
+      <td>Visual feature only </td>
+      <td>Angle feature + Visual feature </td> 
+      <td>Target clean</td>
 <!--       <td>Text</td> -->
     </tr>
 <!--     m5dB -->
@@ -102,24 +103,30 @@ Your browser does not support the video tag.
       <td>1</td>
       <td>
          <video controls width="150">
-           <source src="mvdr/6331559613336179781-00038/clean-6331559613336179781-00038.mp4" type="video/mp4">
+           <source src="tfmasking/6331559613336179781-00038/mix-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
       <td>
         <video controls width="150">
-        <source src="mvdr/6331559613336179781-00038/00038.mp4" type="video/mp4">
+        <source src="tfmasking/6331559613336179781-00038/AF-6331559613336179781-00038.mp4" type="video/mp4">
         </video>
       </td>      
       <td>
          <video controls width="150">
-           <source src="demo3/m05/tavsnet/6331559613336179781-00029.mp4" type="video/mp4">
+           <source src="tfmasking/6331559613336179781-00038/LIP-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td> 
       <td>
          <video controls width="150">
-           <source src="demo3/mp4-trans/transm5-6331559613336179781-00029.mp4" type="video/mp4">
+           <source src="tfmasking/6331559613336179781-00038/LIP+AF-6331559613336179781-00038.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+         </video>
+      </td>
+       <td>
+         <video controls width="150">
+           <source src="tfmasking/6331559613336179781-00038/clean-6331559613336179781-00038.mp4" type="video/mp4">
          Your browser does not support the video tag.
          </video>
       </td>
